@@ -1,4 +1,4 @@
-# deteccionESTRES
+# TFG_detección_estres
 Este repositorio contiene el código y los scripts utilizados en mi Trabajo de Fin de Grado (TFG) titulado "Implementación de Clasificadores para el Reconocimiento de Estrés Basado en Bioseñales". El objetivo principal de este proyecto es desarrollar y evaluar diferentes algoritmos de aprendizaje automático y profundo para la detección de estrés a partir de señales electrodermales (EDA) obtenidas de los datasets AMIGOS y WESAD.
 # Contenido:
 1. **AprendizajeAutomatico_AMIGOS.ipynb**: Notebook que contiene la implementación de diferentes clasificadores de aprendizaje automático, utilizando señales EDA del dataset AMIGOS.
