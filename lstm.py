@@ -190,9 +190,9 @@ def preprocesar_datos( sampling_rate,ruta, ruta_destino, columna_eda,sujetos=[2,
         print(final_df.head())
 
         if sujeto == sujetos[0]:
-            final_df.to_csv(ruta_destino + 'preprocesamiento_lstm.csv', index=False)
+            final_df.to_csv(ruta_destino , index=False)
         else:
-            final_df.to_csv(ruta_destino + 'preprocesamiento_lstm.csv', mode='a', header=False, index=False)
+            final_df.to_csv(ruta_destino , mode='a', header=False, index=False)
 
 def crear_modelo_lstm(hidden_size=200, num_layers=1):
     """
