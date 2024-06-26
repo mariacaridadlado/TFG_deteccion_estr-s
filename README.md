@@ -15,7 +15,7 @@ Este repositorio contiene el código y los scripts utilizados en mi Trabajo de F
 
 ## Descripción del modulo 'lstm.py':
 El módulo lstm.py incluye las siguientes clases y funciones:
-# Clases:
+### Clases:
 1. **Net** : Define la estructura de la red neuronal que combina capas convolucionales (CNN) y una capa LSTM para la clasificación de estrés.
 
     **init**: Inicializa las capas de la red neuronal.
@@ -25,14 +25,14 @@ El módulo lstm.py incluye las siguientes clases y funciones:
     **init**: Inicializa el dataset con datos y etiquetas.
     **len**: Devuelve el número de muestras en el dataset.
     **getitem**: Devuelve una muestra y su etiqueta correspondiente.
-# Funciones:
+### Funciones:
 1. **cargar_datos**: Carga los datos de EDA desde archivos CSV.
 2. **preprocesar_datos**: Preprocesa las señales EDA, aplica transformaciones y guarda los datos preprocesados en un archivo CSV.
 3. **crear_modelo_lstm**: Crea un modelo LSTM con los parámetros especificados.
 4. **entrenar_modelo**: Entrena el modelo LSTM utilizando datos preprocesados.
 5. **cargar_modelo**: Carga un modelo LSTM previamente entrenado.
 6. **evaluar_modelo**: Evalúa un modelo LSTM en un sujeto específico y calcula la exactitud.
-# Uso:
+### Uso:
 1. **Preprocesar los datos**:
 
    `lstm.preprocesar_datos(4,'/content/drive/MyDrive/TFG/WESAD/EDA-','/content/drive/MyDrive/TFG/',columna_eda=0,sujetos=[3,4])`
@@ -40,14 +40,16 @@ El módulo lstm.py incluye las siguientes clases y funciones:
 2. **Crear y entrenar el modelo**:
    
    `modelo = crear_modelo_lstm(hidden_size=200, num_layers=1)`
+   
    `modelo, media_resultados = entrenar_modelo(data, modelo, sujetos, n_epochs=10, batch_size=40, learning_rate=0.001)`
 
-3. **Guardar y cargar el modelo**:
+4. **Guardar y cargar el modelo**:
 
    `torch.save(modelo.state_dict(), 'modelo_lstm.pth')`
+   
    `modelo = cargar_modelo('/ruta/modelo/modelo_lstm.pth')`
 
-4. **Evaluar el modelo**:
+5. **Evaluar el modelo**:
   `predicted, test_accuracy = evaluar_modelo(modelo, data, sujeto, criterion, batch_size=40)`
    
 
